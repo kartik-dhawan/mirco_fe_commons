@@ -4,5 +4,6 @@ type MenuItem = Required<MenuProps>["items"][number];
 declare const CustomLayout: React.FC<{
     items: MenuItem[];
     children?: ReactNode;
+    name?: string;
 }>;
 export default CustomLayout;
