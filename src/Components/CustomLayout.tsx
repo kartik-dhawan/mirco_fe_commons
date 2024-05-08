@@ -1,6 +1,7 @@
 import React, { ReactNode, useState } from "react";
 import type { MenuProps } from "antd";
 import { Layout, Menu } from "antd";
+import { printHello } from "micro_fe_main/methods";
 
 const { Sider } = Layout;
 
@@ -11,6 +12,9 @@ const CustomLayout: React.FC<{ items: MenuItem[]; children?: ReactNode }> = ({
   children,
 }) => {
   const [collapsed, setCollapsed] = useState(false);
+
+  const abc: string[] = printHello([2, 3, 34]);
+  console.log(abc);
 
   return (
     <Layout style={{ minHeight: "100vh" }}>

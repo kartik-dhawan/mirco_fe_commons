@@ -7,7 +7,7 @@
     "build:start": "cd dist && PORT=8080 npx serve",
     "start": "webpack serve --open --mode development",
     "start:live": "webpack serve --open --mode development --live-reload --hot",
-    "compile": "rm -rf dist/lib && tsc --build tsconfig.json"
+    "compile": "rm -rf dist && rm -rf types && tsc --build tsconfig.json"
   },
   "license": "MIT",
   "author": {

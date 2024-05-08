@@ -43,11 +43,16 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: "micro_fe_commons", // naming conventions cannot be hyphenated
       filename: "remoteEntry.js",
-      remotes: {},
+      remotes: {
+        // key should be exactly the same as the name of the micro-fe we're accessing
+        // value should be name followed by @ & url for its remoteEntry.js file
+        micro_fe_main: "micro_fe_main@http://localhost:3000/remoteEntry.js",
+      },
       exposes: {
         // here, key -> represents, at what path it would be available in consuming repo
         // value -> represents the relative path of the exported component/element
         "./Components": "./src/Components/index",
+        "./methods": "./src/methods/index",
       },
       shared: {
         ...deps,

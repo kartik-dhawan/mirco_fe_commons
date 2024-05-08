@@ -19,7 +19,7 @@ const Section: React.FC = () => {
             borderRadius: "8px",
           }}
         >
-          Bill is a cat.
+          Section from common app.
         </div>
       </Content>
       <Footer style={{ textAlign: "center" }}>
